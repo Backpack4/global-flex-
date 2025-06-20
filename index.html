@@ -2,65 +2,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Flex</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: white;
-            background: url('global-flex-bg.png') no-repeat center center fixed;
-            background-size: cover;
-            text-align: center;
-        }
-        .container {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 2em;
-            margin: 2em;
-            border-radius: 1em;
-        }
-        h1 {
-            font-size: 2.5em;
-            background: linear-gradient(to right, #00FFFF, #8A2BE2, #FF00FF);
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-        button {
-            background: cyan;
-            color: black;
-            padding: 1em 2em;
-            font-size: 1em;
-            border: none;
-            border-radius: 0.5em;
-            margin-top: 1em;
-        }
-        input[type="email"] {
-            padding: 0.75em;
-            margin-top: 1em;
-            width: 80%;
-            max-width: 300px;
-            border-radius: 0.5em;
-            border: none;
-        }
-        @media (max-width: 600px) {
-            h1 { font-size: 2em; }
-            .container { margin: 1em; padding: 1em; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Global Flex — Symbolic Product Scroll</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #00fff7, #9b00ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .scroll-gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .product {
+      min-width: 250px;
+      background: #111;
+      border-radius: 12px;
+      padding: 1rem;
+      flex-shrink: 0;
+      border: 1px solid #444;
+      box-shadow: 0 0 10px #00fff766;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      height: 160px;
+    }
+    .product h3 {
+      margin: 1rem 0 0.5rem;
+      font-size: 1.2rem;
+      background: linear-gradient(to right, #f0f, #0ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .product p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    .product button {
+      margin-top: auto;
+      padding: 0.6rem 1.2rem;
+      background: #00fff7;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .btc-spin {
+      text-align: center;
+      margin-top: -1rem;
+    }
+    .btc-spin img {
+      width: 80px;
+      animation: spin 5s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @media(max-width: 600px) {
+      header {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>GLOBAL FLEX</h1>
-        <button>Explore Marketplace</button>
-        <h2>About</h2>
-        <p>Global Flex is a futuristic, crypto-driven marketplace. Secure. Quantum-Ready. Timeless.</p>
-        <h2>Features</h2>
-        <p>• Crypto-Only Checkout<br>• Next-Gen Security<br>• NFT Integration Coming Soon</p>
-        <h2>Newsletter</h2>
-        <p>Get notified when we launch:</p>
-        <input type="email" placeholder="Your email">
-        <p style="margin-top:2em;">© 2025 Global Flex. All rights reserved.</p>
+  <header>GLOBAL FLEX: SYMBOLIC OFFERINGS</header>
+  <div class="btc-spin">
+    <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=026" alt="Spinning Bitcoin">
+  </div>
+  <div class="scroll-gallery">
+    <div class="product">
+      <img src="https://placehold.co/250x160/000000/FFF?text=PLATINUM+CODE" alt="Platinum Code">
+      <h3>PLATINUM CODE</h3>
+      <p>Element of Status — 0.004 BTC</p>
+      <button>ELEVATE</button>
     </div>
+    <div class="product">
+      <img src="https://placehold.co/250x160/111111/FFF?text=BOTANICAL+SERUM" alt="Botanical Serum">
+      <h3>BOTANICAL SERUM</h3>
+      <p>Herbal Intelligence — 0.0012 BTC</p>
+      <button>ELEVATE</button>
+    </div>
+    <div class="product">
+      <img src="https://placehold.co/250x160/222222/FFF?text=NEO+THREADS" alt="Neo Threads">
+      <h3>NEO THREADS</h3>
+      <p>Wearable Identity — 0.0028 BTC</p>
+      <button>ELEVATE</button>
+    </div>
+    <div class="product">
+      <img src="https://placehold.co/250x160/333333/FFF?text=TOY+RELIC+X" alt="Toy Relic X">
+      <h3>TOY RELIC X</h3>
+      <p>Artifact of Emotion — 0.0008 BTC</p>
+      <button>ELEVATE</button>
+    </div>
+    <div class="product">
+      <img src="https://placehold.co/250x160/444444/FFF?text=CRYSTAL+DRIVE" alt="Crystal Drive">
+      <h3>CRYSTAL DRIVE</h3>
+      <p>Futureware Storage — 0.0033 BTC</p>
+      <button>ELEVATE</button>
+    </div>
+    <div class="product">
+      <img src="https://placehold.co/250x160/555555/FFF?text=DRONE+ACCESS+PASS" alt="Drone Pass">
+      <h3>DRONE ACCESS PASS</h3>
+      <p>Sky Priority Delivery — 0.0065 BTC</p>
+      <button>ELEVATE</button>
+    </div>
+  </div>
 </body>
 </html>
