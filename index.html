@@ -3,131 +3,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Global Flex — Symbolic Product Scroll</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Flex</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: black;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('global-flex-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       color: white;
-      overflow-x: hidden;
+      text-align: center;
     }
     header {
-      padding: 2rem;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-      background: linear-gradient(to right, #00fff7, #9b00ff);
+      padding: 60px 20px 20px;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    h1 {
+      font-size: 2.5em;
+      background: linear-gradient(to right, #00ffff, #8a2be2, #ff00ff);
       -webkit-background-clip: text;
-      color: transparent;
+      -webkit-text-fill-color: transparent;
     }
-    .scroll-gallery {
-      display: flex;
-      overflow-x: auto;
-      gap: 1.5rem;
-      padding: 2rem;
-    }
-    .product {
-      min-width: 250px;
-      background: #111;
-      border-radius: 12px;
-      padding: 1rem;
-      flex-shrink: 0;
-      border: 1px solid #444;
-      box-shadow: 0 0 10px #00fff766;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .product img {
-      width: 100%;
-      border-radius: 8px;
-      object-fit: cover;
-      height: 160px;
-    }
-    .product h3 {
-      margin: 1rem 0 0.5rem;
-      font-size: 1.2rem;
-      background: linear-gradient(to right, #f0f, #0ff);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-    .product p {
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-    .product button {
-      margin-top: auto;
-      padding: 0.6rem 1.2rem;
-      background: #00fff7;
+    .explore-btn {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 1em;
       color: #000;
+      background: #00ffff;
       border: none;
-      border-radius: 8px;
-      font-weight: bold;
+      border-radius: 10px;
       cursor: pointer;
     }
-    .btc-spin {
-      text-align: center;
-      margin-top: -1rem;
+    section {
+      margin: 30px 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      padding: 20px;
     }
-    .btc-spin img {
-      width: 80px;
-      animation: spin 5s linear infinite;
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+    .feature {
+      margin: 10px 0;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      font-size: 0.9em;
+    }
+    .btc-spin {
+      width: 100px;
+      margin-top: 20px;
+      animation: spin 4s linear infinite;
     }
     @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    @media(max-width: 600px) {
-      header {
-        font-size: 1.5rem;
-      }
+      from {transform: rotateY(0deg);}
+      to {transform: rotateY(360deg);}
     }
   </style>
 </head>
 <body>
-  <header>GLOBAL FLEX: SYMBOLIC OFFERINGS</header>
-  <div class="btc-spin">
-    <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=026" alt="Spinning Bitcoin">
-  </div>
-  <div class="scroll-gallery">
-    <div class="product">
-      <img src="https://placehold.co/250x160/000000/FFF?text=PLATINUM+CODE" alt="Platinum Code">
-      <h3>PLATINUM CODE</h3>
-      <p>Element of Status — 0.004 BTC</p>
-      <button>ELEVATE</button>
-    </div>
-    <div class="product">
-      <img src="https://placehold.co/250x160/111111/FFF?text=BOTANICAL+SERUM" alt="Botanical Serum">
-      <h3>BOTANICAL SERUM</h3>
-      <p>Herbal Intelligence — 0.0012 BTC</p>
-      <button>ELEVATE</button>
-    </div>
-    <div class="product">
-      <img src="https://placehold.co/250x160/222222/FFF?text=NEO+THREADS" alt="Neo Threads">
-      <h3>NEO THREADS</h3>
-      <p>Wearable Identity — 0.0028 BTC</p>
-      <button>ELEVATE</button>
-    </div>
-    <div class="product">
-      <img src="https://placehold.co/250x160/333333/FFF?text=TOY+RELIC+X" alt="Toy Relic X">
-      <h3>TOY RELIC X</h3>
-      <p>Artifact of Emotion — 0.0008 BTC</p>
-      <button>ELEVATE</button>
-    </div>
-    <div class="product">
-      <img src="https://placehold.co/250x160/444444/FFF?text=CRYSTAL+DRIVE" alt="Crystal Drive">
-      <h3>CRYSTAL DRIVE</h3>
-      <p>Futureware Storage — 0.0033 BTC</p>
-      <button>ELEVATE</button>
-    </div>
-    <div class="product">
-      <img src="https://placehold.co/250x160/555555/FFF?text=DRONE+ACCESS+PASS" alt="Drone Pass">
-      <h3>DRONE ACCESS PASS</h3>
-      <p>Sky Priority Delivery — 0.0065 BTC</p>
-      <button>ELEVATE</button>
-    </div>
-  </div>
+  <header>
+    <h1>GLOBAL FLEX</h1>
+    <button class="explore-btn">Explore Marketplace</button>
+  </header>
+
+  <img src="btc-spin.gif" alt="Spinning Bitcoin" class="btc-spin" />
+
+  <section>
+    <h2>About</h2>
+    <p>Global Flex is a futuristic, crypto-driven marketplace. Secure. Quantum-Ready. Timeless.</p>
+  </section>
+
+  <section>
+    <h2>Features</h2>
+    <div class="feature">Crypto-Only Checkout</div>
+    <div class="feature">Next-Gen Security</div>
+    <div class="feature">NFT Integration Coming Soon</div>
+  </section>
+
+  <section>
+    <h2>Newsletter</h2>
+    <p>Get notified when we launch:</p>
+    <input type="email" placeholder="Your email" style="padding:10px; width:80%; border:none; border-radius:6px;" />
+  </section>
+
+  <footer>
+    &copy; 2025 Global Flex. All rights reserved.
+  </footer>
 </body>
 </html>
